@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import ReleaseGate from './components/ReleaseGate';
 import AudioPlayer from './components/AudioPlayer';
 import Welcome from './pages/Welcome';
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Layout>
         <Routes>
           <Route path="/" element={<Welcome />} />
@@ -29,7 +29,7 @@ const App = () => {
           <Route path="/letter" element={<Letter />} />
         </Routes>
       </Layout>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
