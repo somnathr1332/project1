@@ -3,7 +3,7 @@ import SONG from "../audio/song1.mp3"
 // Set your target date here
 // Note: '2026-01-00' creates an invalid date in some browsers, 
 // usually correcting to Dec 31, 2025. Ensure this is the date you want.
-const TARGET_DATE = new Date('2026-01-11T13:29:00'); 
+const TARGET_DATE = new Date('2026-01-22T00:00:01'); 
 
 const ReleaseGate = ({ children }) => {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
