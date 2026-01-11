@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import SONG from "../audio/song1.mp3"
 
-const TARGET_DATE = new Date('2026-01-22T00:00:01Z'); 
+const TARGET_DATE = new Date('2026-01-11T20:35:00'); 
 
 const ReleaseGate = ({ children }) => {
   // We initialize with null to show a "Loading..." state while we fetch internet time
