@@ -59,7 +59,7 @@ const App = () => {
     // 1. ReleaseGate is the "God" wrapper. 
     // Nothing below runs until the timer ends.
     <HashRouter>
-  {/* <ReleaseGate> */}
+   <ReleaseGate> 
     <Routes>
       <Route path="/" element={<PasswordPageWrapper />} />
 
@@ -99,7 +99,7 @@ const App = () => {
         }
       />
     </Routes>
-  {/* </ReleaseGate> */}
+   </ReleaseGate> 
 </HashRouter>
 
   );
