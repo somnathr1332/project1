@@ -58,25 +58,50 @@ const App = () => {
   return (
     // 1. ReleaseGate is the "God" wrapper. 
     // Nothing below runs until the timer ends.
-    <ReleaseGate>
-      
-      <HashRouter>
-        <Routes>
-          {/* 2. DEFAULT ROUTE ("/") IS THE PASSWORD PAGE.
-             When timer ends, this is what they see first.
-          */}
-          <Route path="/" element={<PasswordPageWrapper />} />
+    <HashRouter>
+  <ReleaseGate>
+    <Routes>
+      <Route path="/" element={<PasswordPageWrapper />} />
 
-          {/* 3. MAIN APP ROUTES (Protected by the flow) */}
-          <Route path="/home" element={<MainLayout><Welcome /></MainLayout>} />
-          <Route path="/memory-lane" element={<MainLayout><MemoryLane /></MainLayout>} />
-          <Route path="/cake" element={<MainLayout><Cake launchConfetti={launchConfetti} /></MainLayout>} />
-          <Route path="/letter" element={<MainLayout><Letter /></MainLayout>} />
+      <Route
+        path="/home"
+        element={
+          <MainLayout>
+            <Welcome />
+          </MainLayout>
+        }
+      />
 
-        </Routes>
-      </HashRouter>
+      <Route
+        path="/memory-lane"
+        element={
+          <MainLayout>
+            <MemoryLane />
+          </MainLayout>
+        }
+      />
 
-    </ReleaseGate>
+      <Route
+        path="/cake"
+        element={
+          <MainLayout>
+            <Cake launchConfetti={launchConfetti} />
+          </MainLayout>
+        }
+      />
+
+      <Route
+        path="/letter"
+        element={
+          <MainLayout>
+            <Letter />
+          </MainLayout>
+        }
+      />
+    </Routes>
+  </ReleaseGate>
+</HashRouter>
+
   );
 };
 
